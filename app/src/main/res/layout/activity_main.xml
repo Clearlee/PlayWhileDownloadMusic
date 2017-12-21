@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f0f0f0"
+    tools:context="com.clearlee.playwhiledownloadmusic.MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/music_player_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <ImageView
+            android:id="@+id/iv_music_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:src="@mipmap/currplay_music_qq" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_music_from"
+            android:layout_marginLeft="14dp"
+            android:layout_toRightOf="@+id/iv_music_from"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="青花瓷"
+            android:textColor="#303030"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_name"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="6dp"
+            android:text="周杰伦"
+            android:textColor="#787878"
+            android:textSize="12sp" />
+
+        <SeekBar
+            android:id="@+id/sb_music"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_music_from"
+            android:layout_marginTop="10dp"
+            android:max="100"
+            android:maxHeight="8dp"
+            android:minHeight="8dp"
+            android:padding="2dp"
+            android:paddingEnd="2dp"
+            android:paddingStart="2dp"
+            android:progress="0"
+            android:progressDrawable="@drawable/music_progressbar"
+            android:thumbOffset="6dp" />
+
+        <TextView
+            android:id="@+id/tv_curr_play_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/sb_music"
+            android:layout_below="@+id/sb_music"
+            android:text="00:00"
+            android:textColor="#787878"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_total_play_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/sb_music"
+            android:layout_below="@+id/sb_music"
+            android:text="00:00"
+            android:textColor="#787878"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/iv_music_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_total_play_time"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/music_button_play" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
